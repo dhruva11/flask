@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>COVID Prediction Result</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>COVID Prediction Result</h1>
+        </div>
+        <div class="main">
+            <!-- Update the image source to use the correct URL path -->
+            <img src="{{ url_for('uploaded_file', filename=result_image) }}" alt="COVID-19 Prediction Image">
+            <div class="result">{{ prediction }}</div>
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
